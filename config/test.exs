@@ -21,7 +21,7 @@ config :takso, TaksoWeb.Endpoint,
   server: true
 
 # Add the following lines at the end of the file
-config :hound, driver: "chrome_driver", port: 55591  # If needed, update the port according to the chrome_drive message
+config :hound, driver: "chrome_driver", port: 63193    # If needed, update the port according to the chrome_drive message
 config :takso, sql_sandbox: true
 
 # In test we don't send emails
