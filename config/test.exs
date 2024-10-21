@@ -16,9 +16,13 @@ config :takso, Takso.Repo,
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :takso, TaksoWeb.Endpoint,
-  http: [ip: {127, 0, 0, 1}, port: 4002],
+  http: [ip: {127, 0, 0, 1}, port: 4001],
   secret_key_base: "r7gF23/0I9pxqhUJcX0AcYPEvDRwzGtdHFGNu+8PyRSX9NIOLKq5uT9TLFby16kb",
-  server: false
+  server: true
+
+# Add the following lines at the end of the file
+config :hound, driver: "chrome_driver", port: 55591  # If needed, update the port according to the chrome_drive message
+config :takso, sql_sandbox: true
 
 # In test we don't send emails
 config :takso, Takso.Mailer, adapter: Swoosh.Adapters.Test

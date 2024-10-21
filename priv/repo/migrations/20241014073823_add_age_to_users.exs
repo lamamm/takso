@@ -1,3 +1,4 @@
+
 defmodule Takso.Repo.Migrations.InsertAgeColumnToUsers do
   use Ecto.Migration
 

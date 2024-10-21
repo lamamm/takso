@@ -2,12 +2,11 @@ import Config
 
 # Configure your database
 config :takso, Takso.Repo,
+  adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
   database: "takso_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
+  hostname: "localhost",
   pool_size: 10
 
 # For development, we disable any cache and enable
