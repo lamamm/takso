@@ -1,5 +1,12 @@
-<h1>New Booking</h1>
-<p>Your taxi will arrive in 5 minutes!</p>
-<input id="pickup_address">
-<input id="dropoff_address">
-<button id="submit_button">Submit</button>
+<.simple_form :let={f} for={@changeset} action={~p"/bookings"} method="post">
+  <div>
+    <label for="pickup_address">Pickup Address:</label>
+    <.input field={f[:pickup_address]} id="pickup_address" type="text" name="booking[pickup_address]" label="Pickup Address" />
+  </div>
+  <div>
+    <.input field={f[:pickup_address]} id="dropoff_address" type="text" name="booking[dropoff_address]" label="Dropoff Address" />
+  </div>
+  <:actions>
+    <.button id="submit_button">Submit</.button>
+  </:actions>
+</.simple_form>
